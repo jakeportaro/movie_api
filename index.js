@@ -22,3 +22,7 @@ app.get('/movies', (req, res) => {
     console.error(err.stack);
     res.status(500).send('Something isn"t loading right :(!');
   });
+
+  app.listen(8080, () => {
+    console.log("Your app is listening on port 8080.");
+    });
