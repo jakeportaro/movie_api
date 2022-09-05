@@ -4,17 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "watch 'npm run kill && npm run start' .",
+    "kill": "killall node"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "^8.23.0"
-  }
+    "eslint": "^8.23.0",
+    "watch": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeportaro/movie_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakeportaro/movie_api/issues"
+  },
+  "homepage": "https://github.com/jakeportaro/movie_api#readme"
 }

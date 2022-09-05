@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>movie_api 🚧</h1>
+    <script src="index.js"></script>
+
+    <table>
+        <tr>
+            <th>Business Logic</th>
+            <th>URL</th>
+            <th>HTTP Method</th>
+            <th>Request body data format</th>
+            <th>Query parameters</th>
+            <th>Response body data format</th>
+        </tr>
+        <tr> 
+            <td>Return a list of all movies</td>
+            <td>/movies</td>
+            <td>GET </td>
+            <td>None</td>
+            <td>None</td>
+            <td>A JSON Object holding data of all the movies</td>
+        </tr>
+        <tr> 
+            <td>Returns the data about a movie, by movie name</td>
+            <td>/movies/:title</td>
+            <td>GET </td>
+            <td>None</td>
+            <td>:title</td>
+            <td>A JSON Object holding data of a particular movie that was searched by title</td>
+        </tr>
+        <tr> 
+            <td>Returns the data of a movie, by a genre name</td>
+            <td>/movies/:genre</td>
+            <td>GET </td>
+            <td>None</td>
+            <td>:genreName</td>
+            <td>A JSON Object holding data of a particular movie that was searched by genre</td>
+        </tr>
+        <tr> 
+            <td>Return the data of a movie, by a director name</td>
+            <td>/movies/:director</td>
+            <td>GET </td>
+            <td>None</td>
+            <td>:directorName</td>
+            <td>A JSON Object holding data of a particular movie that was searched by director name</td>
+        </tr>
+        <tr> 
+            <td>Allows new users to register</td>
+            <td>/users</td>
+            <td>POST </td>
+            <td>A JSON object holding data about the user to add, structured like:
+                {
+                    id: 1,
+                    name: "Jake",
+                    favoriteMovies: ["Iron Man"]
+                  }</td>
+            <td>None</td>
+            <td>A JSON Object holding data of a particular user that was added and structured like the example to the left</td>
+        </tr>
+        <tr> 
+            <td>Allows new users to update username</td>
+            <td>/users/:id</td>
+            <td>PUT </td>
+            <td>None</td>
+            <td>:id</td>
+            <td>A JSON Object holding data of a particular user that was updated and structured like the example to the left</td>
+        </tr>
+        <tr> 
+            <td>Adds data to add new movies to the list</td>
+            <td>/users/:id/:movieTitle</td>
+            <td>POST </td>
+            <td>A JSON object holding data about the user to add, structured like:
+                {
+                    id: 1,
+                    name: "Jake",
+                    favoriteMovies: ["Iron Man"]
+                  }</td>
+            <td>:id/:movieTitle</td>
+            <td>a text message displaying: ${movieTitle} has been added to user ${id}'s array</td>
+        </tr>
+        <tr> 
+            <td>Removes movies from a list by id</td>
+            <td>/users/:id/:movieTitle</td>
+            <td>DELETE </td>
+            <td>None</td>
+            <td>:id/:movieTitle</td>
+            <td>a text message displaying: ${movieTitle} has been removed to user ${id}'s array</td>
+        </tr>
+        <tr> 
+            <td>Allows users to unregister</td>
+            <td>/users/:id</td>
+            <td>DELETE </td>
+            <td>None</td>
+            <td>:id</td>
+            <td>user ${id} has been deleted</td>
+        </tr>
+    </table>
+</body>
+</html>
