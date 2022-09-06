@@ -8,17 +8,17 @@ app.use(bodyParser.json());
 
 let users = [
   {
-    id: 1,
+    "id": 1,
     name: "Jake",
     favoriteMovies: ["Iron Man"]
   },
   {
-    id: 2,
+    "id": 2,
     name: "Matt",
     favoriteMovies: ["Thor"]
   },
   {
-    id: 3,
+    "id": 3,
     name: "Lauren",
     favoriteMovies: []
   }
@@ -92,9 +92,11 @@ app.get('/movies/director/:directorName', (req, res) => {
 
 //Gets Data of user by user ID
 app.get('/users/:id', (req, res) => {
-  const { favoriteMovies } = req.params;
-  const user = users.find( user => user.favoriteMovies === favoriteMovies );
-
+  console.log(users);
+  const { id } = req.params;
+  console.log('id is: ' + id);
+  const user = users.find( user => user.id.toString === id );
+  console.log(user)
   if (user) {
       return res.status(200).json(user);
   } else {
