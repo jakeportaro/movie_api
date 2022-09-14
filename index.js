@@ -58,38 +58,45 @@ let movies = [
 // Gets the list of data about ALL movies
 
 app.get('/movies', (req, res) => {
-  res.json(movies);
+  Movies.find()
+    .then((movies) => {
+      res.status(201).json(movies);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
 });
-// Gets the data about a single movies, by name
+// Gets the data about a single movies, by title
 
-app.get('/movies/:title', (req, res) => {
-  const { title } = req.params;
-  const movie = movies.find( movie => title === movie.Title );
+app.get('/movies/:Title', (req, res) => {
+  Movies.findOne({ Title: req.params.Title })
+  .then((movie) => {
+  res.json(movie);
+  })
+  .catch((err) => {
+  console.error(err);
+  res.status(500).send("Error: " + err);
+  });
+  });
+  
+  
 
-  if (movie) {
-      return res.status(200).json(movie);
-  } else {
-    res.status(400).send('no such movie')
-  }
-
-});
-
-// Gets the data about a genre by name
-app.get('/movies/genre/:genreName', (req, res) => {
-  const { genreName } = req.params;
-  const genre = movies.find( movie => movie.Genre === genreName );
-
-  if (genre) {
-      return res.status(200).json(genre);
-  } else {
-    res.status(400).send('no such genre')
-  }
-
+// Gets the data about a movie by a genre name
+app.get('/movies/genre/:Name', (req, res) => {
+  Movies.find({ 'Genre.Name': req.params.Name })
+  .then((movie) => {
+    res.json(movie);
+  })
+  .catch((err) => {
+    console.error(err);
+    res.status(500).send('Error: ' + err);
+  });
 });
 //Gets the data about a director by name
 
-app.get('/movies/director/:directorName', (req, res) => {
-  Movies.findOne({ directorName: req.params.directorName })
+app.get('/movies/director/:Name', (req, res) => {
+  Movies.findOne({ 'Director.Name': req.params.Name })
   .then((movie) => {
     res.json(movie);
   })
@@ -226,3 +233,5 @@ app.delete('/users/:Username', (req, res) => {
 app.listen(8080, () => {
   console.log('Your app is listening on port 8080');
 });
+
+
