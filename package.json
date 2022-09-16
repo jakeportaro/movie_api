@@ -8,7 +8,6 @@
     "start": "node index.js",
     "dev": "watch 'npm run kill && npm run start' .",
     "kill": "killall node",
-    "start": "node index.js"
   },
   "keywords": [],
   "author": "",

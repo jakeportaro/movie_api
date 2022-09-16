@@ -264,54 +264,6 @@
 </html>
 
 
-{
-    Username: 'jakeportaro',
-    Password: 'movie_api',
-    Email: 'jakeportaro@email',
-    Birthday: ISODate("1996-12-11T00:00:00.000Z"),
-    FavoriteMovies: [
-      ObjectId("631ad122ad0d80d1c3ababa5"),
-      ObjectId("631ad0d5ad0d80d1c3ababa4"),
-      ObjectId("631a926dad0d80d1c3abab9d"),
-      ObjectId("631ad122ad0d80d1c3ababa5")
-    ]
-  },
-  {
-    Username: 'christianportaro',
-    Password: 'movie_api',
-    Email: 'christianportaro@email',
-    Birthday: ISODate("1994-10-06T00:00:00.000Z"),
-    FavoriteMovies: [
-      ObjectId("631ad122ad0d80d1c3ababa5"),
-      ObjectId("631ad0d5ad0d80d1c3ababa4")
-    ]
-  },
-  {
-    Username: 'laurenportaro',
-    Password: 'movie_api',
-    Email: 'laurenportaro@email',
-    Birthday: ISODate("1996-03-25T00:00:00.000Z"),
-    FavoriteMovies: [
-      ObjectId("631ad02bad0d80d1c3ababa3"),
-      ObjectId("631ad0d5ad0d80d1c3ababa1")
-    ]
-  },
-  {
-    Username: 'ashleyfrautnick',
-    Password: 'movie_api',
-    Email: 'ashleyfrautnick@email',
-    Birthday: ISODate("1997-08-05T00:00:00.000Z"),
-    FavoriteMovies: [
-      ObjectId("631ad02bad0d80d1c3ababa3"),
-      ObjectId("631acea8ad0d80d1c3ababa1")
-    ]
-  },
-  {
-    Username: 'anthonysaccente updated',
-    Password: 'movie_api',
-    Email: 'anthonysaccente@email',
-    Birthday: ISODate("1997-05-30T00:00:00.000Z"),
-    FavoriteMovies: [],
-    __v: 0
-  }
+mongoimport --uri mongodb+srv://jakeportaro:Laurenxc7@movieapi.kxya7by.mongodb.net/movieapi --collection movies --type json --file /Users/jakeportaro/Documents/movie_api/movies.json
 
+mongodb+srv://jakeportaro:Laurenxc7@movieapi.kxya7by.mongodb.net/movieapi?retryWrites=true&w=majority
