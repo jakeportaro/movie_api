@@ -1,5 +1,5 @@
 {
-  "name": "movie_api",
+  "name": "movieapi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "watch 'npm run kill && npm run start' .",
-    "kill": "killall node",
+    "kill": "killall node"
   },
   "keywords": [],
   "author": "",
