@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakeportaro/movie_api.git"
+    "url": "git+https://github.com/jakeportaro/movieapi.git"
   },
   "bugs": {
-    "url": "https://github.com/jakeportaro/movie_api/issues"
+    "url": "https://github.com/jakeportaro/movieapi/issues"
   },
-  "homepage": "https://github.com/jakeportaro/movie_api#readme"
+  "homepage": "https://github.com/jakeportaro/movieapi#readme"
 }
