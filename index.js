@@ -54,7 +54,6 @@ let movies = [
     "Genre": 'Comdedy',
    },
   {
-    
     "Title": 'Iron Man',
    "Director":'Jon Favreau',
    "Genre": 'Power',
@@ -277,6 +276,14 @@ passport.authenticate('jwt', { session: false }),
       res.status(500).send('Error: ' + err);
     });
 });
+
+
+app.post('/',
+(req, res) => {
+  res.json('Welcome to my App!');
+ 
+});
+
 
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0',() => {
